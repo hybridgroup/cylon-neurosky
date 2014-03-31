@@ -19,7 +19,7 @@ Install the module with: `npm install cylon-neurosky`
 
 ## Examples
 
-## Connecting
+This example displays the Attention and Meditation data reading sent by the Mindwave Headset:
 
 ### JavaScript
 
@@ -27,16 +27,53 @@ Install the module with: `npm install cylon-neurosky`
 var Cylon = require('cylon');
 
 Cylon.robot({
-  connection: { name: 'neurosky', adaptor: 'neurosky' },
-  device: {name: 'neurosky', driver: 'neurosky'},
+  connection:
+    {name: 'neurosky', adaptor: 'neurosky', port: '/dev/rfcomm0'},
+
+  device:
+    {name: 'headset', driver: 'neurosky'},
 
   work: function(my) {
-    // provide an example of your module here
+    my.headset.on('attention', function(data) {
+      Logger.info("attention:" + data);
+    });
+    my.headset.on('meditation', function(data) {
+      Logger.info("meditation:" + data);
+    });
   }
-}).start();
+});
+
+Cylon.start();
 ```
 
-Explain how to connect from the computer to the device here...
+## How To Connect
+
+### OSX
+
+In order to allow Cylon.js running on your Mac to access the Mindwave, go to "Bluetooth > Open Bluetooth Preferences > Sharing Setup" and make sure that "Bluetooth Sharing" is checked.
+
+### Ubuntu
+
+Connecting to the Mindwave from Ubuntu or any other Linux-based OS can be done entirely from the command line using CylonJS CLI commands. Here are the steps.
+
+Find the address of the Mindwave, by using:
+```
+cylon scan bluetooth
+```
+
+Pair to Mindwave using this command (substituting the actual address of your Mindwave):
+```
+cylon bluetooth pair <address>
+```
+
+Connect to the Mindwave using this command (substituting the actual address of your Mindwave):
+```
+cylon bluetooth connect <address>
+```
+
+### Windows
+
+You should be able to pair your Mindwave using your normal system tray applet for Bluetooth, and then connect to the COM port that is bound to the device, such as `COM3`.
 
 ## Contributing
 
@@ -54,7 +91,7 @@ Explain how to connect from the computer to the device here...
 
 ## Release History
 
-None yet...
+Version 0.1.0 - Initial release for ongoing development
 
 ## License
 
