@@ -8,14 +8,8 @@ Cylon.robot({
     {name: 'headset', driver: 'neurosky'},
 
   work: function(my) {
-    my.headset.on('attention', function(data) {
-      Logger.info("attention:" + data);
-    });
-    my.headset.on('meditation', function(data) {
-      Logger.info("meditation:" + data);
-    });
     my.headset.on('eeg', function(data) {
-      Logger.info("eeg:" + data);
+      Logger.info(data);
     });
   }
 });
