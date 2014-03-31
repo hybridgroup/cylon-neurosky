@@ -4,19 +4,19 @@
   "main": "lib/cylon-neurosky.js",
   "description": "Cylon module for Neurosky",
   "homepage": "http://cylonjs.com",
-  "bugs": "Your bug report URL here",
+  "bugs": "https://github.com/hybridgroup/cylon-neurosky/issues",
   "author": {
-    "name": "Your Name Here",
-    "email": "Your Email Here",
-    "url": "Your URL here"
+    "name": "The Hybrid Group",
+    "email": "",
+    "url": "http://hybridgroup.com"
   },
   "repository": {
     "type": "git",
-    "url": "your git URL here"
+    "url": "https://github.com/hybridgroup/cylon-neurosky"
   },
   "licenses": [
     {
-      "type": "your license type here"
+      "type": "Apache 2.0"
     }
   ],
   "devDependencies": {
@@ -30,6 +30,6 @@
     "node-namespace": "~1.0.0",
     "cylon": ">=0.12.0",
     "serialport": ">= 1.3.1",
-    "buffy": "*"
+    "buffy": ">= 0.0.5"
   }
 }
