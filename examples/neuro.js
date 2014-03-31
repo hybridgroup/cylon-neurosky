@@ -14,6 +14,9 @@ Cylon.robot({
     my.headset.on('meditation', function(data) {
       Logger.info("meditation:" + data);
     });
+    my.headset.on('eeg', function(data) {
+      Logger.info("eeg:" + data);
+    });
   }
 });
 
