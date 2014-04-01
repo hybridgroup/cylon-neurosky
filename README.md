@@ -13,6 +13,8 @@ sister project Gobot (http://gobot.io).
 For more information about Cylon, check out our repo at
 https://github.com/hybridgroup/cylon
 
+[![Build Status](https://travis-ci.org/hybridgroup/cylon-neurosky.svg)](https://travis-ci.org/hybridgroup/cylon-neurosky)
+
 ## Getting Started
 
 Install the module with: `npm install cylon-neurosky`
