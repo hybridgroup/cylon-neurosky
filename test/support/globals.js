@@ -45,4 +45,4 @@ global.err = function (fn, msg) {
 chai.use(sinonChai);
 
 // if you want a detailed error stack output
-chai.Assertion.includeStack = true;
+// chai.Assertion.includeStack = true;
