@@ -1,14 +1,9 @@
 "use strict";
 
-var Neurosky = source("adaptor");
+var Adaptor = source("adaptor");
 
 describe("Cylon.Adaptors.Neurosky", function() {
-  var adaptor;
-  adaptor = new Cylon.Adaptors.Neurosky({
-    connection: {
-      port: "/dev/ABCD"
-    }
-  });
+  var adaptor = new Adaptor({ connection: { port: "/dev/ABCD" } });
 
   it("needs tests");
 });
