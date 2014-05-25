@@ -9,7 +9,7 @@ Cylon.robot({
 
   work: function(my) {
     my.headset.on('packet', function(data) {
-      Cylon.Logger.info(data);
+      console.log(data);
     });
   }
 });
