@@ -9,10 +9,10 @@ Cylon.robot({
 
   work: function(my) {
     my.headset.on('attention', function(data) {
-      Logger.info("attention:" + data);
+      Cylon.Logger.info("attention:" + data);
     });
     my.headset.on('meditation', function(data) {
-      Logger.info("meditation:" + data);
+      Cylon.Logger.info("meditation:" + data);
     });
   }
 });

@@ -9,7 +9,7 @@ Cylon.robot({
 
   work: function(my) {
     my.headset.on('eeg', function(data) {
-      Logger.info(data);
+      Cylon.Logger.info(data);
     });
   }
 });
