@@ -1,16 +1,12 @@
 var Cylon = require('cylon');
 
 Cylon.robot({
-  connection:
-    {name: 'neurosky', adaptor: 'neurosky', port: '/dev/rfcomm0'},
+  connection: { name: 'neurosky', adaptor: 'neurosky', port: '/dev/rfcomm0' },
 
-  device:
-    {name: 'headset', driver: 'neurosky'},
+  device: { name: 'headset', driver: 'neurosky' },
 
   work: function(my) {
-    my.headset.on('eeg', function(data) {
-      Logger.info(data);
-    });
+    my.headset.on('eeg', console.log);
   }
 });
 

@@ -9,8 +9,8 @@ var chai = require('chai');
 var sinon = require('sinon');
 var sinonChai = require('sinon-chai');
 
-require('cylon');
-Logger.setup(false); // turn off Cylon's logger by default
+var Cylon = require('cylon');
+Cylon.Logger.setup(false); // turn off Cylon's logger by default
 
 global.chai = chai;
 global.should = chai.should();
