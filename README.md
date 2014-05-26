@@ -93,6 +93,8 @@ You should be able to pair your Mindwave using your normal system tray applet fo
 
 ## Release History
 
+Version 0.2.0 - Compatibility with Cylon 0.14.0, remove node-namespace.
+
 Version 0.1.0 - Initial release for ongoing development
 
 ## License
