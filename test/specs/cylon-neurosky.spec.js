@@ -2,16 +2,41 @@
 
 var module = source("cylon-neurosky");
 
-describe("Cylon.Neurosky", function() {
-  it("should be able to register", function() {
-    module.register.should.be.a('function');
+var Adaptor = source('adaptor'),
+    Driver = source('driver');
+
+describe("cylon-neurosky", function() {
+  describe("#register", function() {
+    var bot, adaptor, driver;
+
+    beforeEach(function() {
+      bot = {};
+
+      adaptor = bot.registerAdaptor = spy();
+      driver = bot.registerDriver = spy();
+
+      module.register(bot);
+    });
+
+    it("registers the 'cylon-neurosky' adaptor with the robot", function() {
+      expect(adaptor).to.be.calledWith('cylon-neurosky', 'neurosky');
+    });
+
+    it("registers the 'cylon-neurosky' driver with the robot", function() {
+      expect(driver).to.be.calledWith('cylon-neurosky', 'neurosky');
+    });
   });
 
-  it("should be able to create adaptor", function() {
-    module.adaptor.should.be.a('function');
+  describe("#adaptor", function() {
+    it('returns an instance of the Neurosky adaptor', function() {
+      var args = { connection: { port: '/dev/null' } };
+      expect(module.adaptor(args)).to.be.an.instanceOf(Adaptor);
+    });
   });
 
-  it("should be able to create driver", function() {
-    module.driver.should.be.a('function');
+  describe("#driver", function() {
+    it('returns an instance of the Neurosky driver', function() {
+      expect(module.driver({ device: {} })).to.be.an.instanceOf(Driver);
+    });
   });
 });
