@@ -93,6 +93,8 @@ You should be able to pair your Mindwave using your normal system tray applet fo
 
 ## Release History
 
+Version 0.4.0 - Compatibility with Cylon 0.16.0
+
 Version 0.3.1 - Add peerDependencies to package.json
 
 Version 0.3.0 - Compatibility with Cylon 0.15.0
