@@ -36,7 +36,7 @@ describe("cylon-neurosky", function() {
 
   describe("#driver", function() {
     it('returns an instance of the Neurosky driver', function() {
-      expect(module.driver({ device: {} })).to.be.an.instanceOf(Driver);
+      expect(module.driver({ device: { connection: {} } })).to.be.an.instanceOf(Driver);
     });
   });
 });
