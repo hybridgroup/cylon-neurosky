@@ -13,7 +13,7 @@ sister project Gobot (http://gobot.io).
 For more information about Cylon, check out our repo at
 https://github.com/hybridgroup/cylon
 
-[![Build Status](https://travis-ci.org/hybridgroup/cylon-neurosky.svg)](https://travis-ci.org/hybridgroup/cylon-neurosky)
+[![Build Status](https://secure.travis-ci.org/hybridgroup/cylon-neurosky.png?branch=master)](http://travis-ci.org/hybridgroup/cylon-neurosky) [![Code Climate](https://codeclimate.com/github/hybridgroup/cylon-neurosky/badges/gpa.svg)](https://codeclimate.com/github/hybridgroup/cylon-neurosky) [![Test Coverage](https://codeclimate.com/github/hybridgroup/cylon-neurosky/badges/coverage.svg)](https://codeclimate.com/github/hybridgroup/cylon-neurosky)
 
 ## Getting Started
 
