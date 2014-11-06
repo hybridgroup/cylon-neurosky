@@ -3,6 +3,7 @@
 // allow production modules to expose internal
 // functions and properties for testing
 process.env.NODE_ENV = 'test';
+global.CYLON_TEST = true;
 
 var path = require('path');
 var chai = require('chai');
@@ -10,7 +11,7 @@ var sinon = require('sinon');
 var sinonChai = require('sinon-chai');
 
 var Cylon = require('cylon');
-Cylon.Logger.setup(false); // turn off Cylon's logger by default
+Cylon.config({ logging: { logger: false } });
 
 global.chai = chai;
 global.should = chai.should();
