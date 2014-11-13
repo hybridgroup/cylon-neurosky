@@ -20,7 +20,7 @@ describe("cylon-neurosky", function() {
 
   describe("#adaptor", function() {
     it('returns an instance of the Neurosky adaptor', function() {
-      var args = { connection: { port: '/dev/null' } };
+      var args = { port: '/dev/null' };
       expect(module.adaptor(args)).to.be.an.instanceOf(Adaptor);
     });
   });

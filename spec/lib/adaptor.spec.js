@@ -10,8 +10,8 @@ describe("Cylon.Adaptors.Neurosky", function() {
 
   beforeEach(function() {
     adaptor = new Adaptor({
-      connection: { port: "/dev/null" }
-    })
+      port: '/dev/null'
+    });
   });
 
   it("subclasses Cylon.Adaptor", function() {
@@ -44,7 +44,7 @@ describe("Cylon.Adaptors.Neurosky", function() {
     context("when the serialport is open", function() {
       beforeEach(function() {
         open.yields();
-        adaptor.connection = { emit: spy() }
+        adaptor.emit = spy();
         adaptor.connect(callback);
       });
 
@@ -53,7 +53,7 @@ describe("Cylon.Adaptors.Neurosky", function() {
       });
 
       it("emits the 'connect' event", function() {
-        expect(adaptor.connection.emit).to.be.calledWith('connect');
+        expect(adaptor.emit).to.be.calledWith('connect');
       });
     });
   });
@@ -63,8 +63,7 @@ describe("Cylon.Adaptors.Neurosky", function() {
 
     beforeEach(function() {
       adaptor.serialPort = {};
-      adaptor.connection = { emit: spy() };
-      emit = adaptor.connection.emit;
+      adaptor.emit = emit = spy();
 
       pause = adaptor.serialPort.pause = spy();
       flush = adaptor.serialPort.flush = stub();
