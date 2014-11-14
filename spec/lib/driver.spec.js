@@ -9,7 +9,7 @@ describe("Cylon.Drivers.Neurosky", function() {
   var driver;
 
   beforeEach(function() {
-    driver = new Driver({ adaptor: {} });
+    driver = new Driver({ connection: {} });
   });
 
   it('subclasses Cylon.Driver', function() {
@@ -21,11 +21,11 @@ describe("Cylon.Drivers.Neurosky", function() {
     var read;
 
     beforeEach(function() {
-      driver.adaptor = { read: stub() };
-      read = driver.adaptor.read;
+      driver.connection = { read: stub() };
+      read = driver.connection.read;
     });
 
-    it("calls #read on the adaptor", function() {
+    it("calls #read on the connection", function() {
       driver.start(function() {});
       expect(read).to.be.called;
     });
