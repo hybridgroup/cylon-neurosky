@@ -29,23 +29,24 @@ This example displays the Attention and Meditation data reading sent by the Mind
 var Cylon = require('cylon');
 
 Cylon.robot({
-  connection:
-    {name: 'neurosky', adaptor: 'neurosky', port: '/dev/rfcomm0'},
+  connections: {
+    neurosky: { adaptor: 'neurosky', port: '/dev/rfcomm0' }
+  },
 
-  device:
-    {name: 'headset', driver: 'neurosky'},
+  devices: {
+    headset: { driver: 'neurosky' }
+  },
 
   work: function(my) {
     my.headset.on('attention', function(data) {
       Logger.info("attention:" + data);
     });
+
     my.headset.on('meditation', function(data) {
       Logger.info("meditation:" + data);
     });
   }
-});
-
-Cylon.start();
+}).start();
 ```
 
 ## How To Connect
@@ -56,22 +57,20 @@ In order to allow Cylon.js running on your Mac to access the Mindwave, go to "Bl
 
 ### Ubuntu
 
-Connecting to the Mindwave from Ubuntu or any other Linux-based OS can be done entirely from the command line using CylonJS CLI commands. Here are the steps.
+Connecting to the Mindwave from Ubuntu or any other Linux-based OS can be done entirely from the command line using [Gort](http://gort.io) commands.
+Here are the steps:
 
 Find the address of the Mindwave, by using:
-```
-cylon scan bluetooth
-```
+
+    $ gort scan bluetooth
 
 Pair to Mindwave using this command (substituting the actual address of your Mindwave):
-```
-cylon bluetooth pair <address>
-```
+
+    $ gort bluetooth pair <address>
 
 Connect to the Mindwave using this command (substituting the actual address of your Mindwave):
-```
-cylon bluetooth connect <address>
-```
+
+    $ gort bluetooth connect <address>
 
 ### Windows
 
