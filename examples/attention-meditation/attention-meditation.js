@@ -1,8 +1,14 @@
 var Cylon = require('cylon');
 
 Cylon.robot({
-  connection: {name: 'neurosky', adaptor: 'neurosky', port: '/dev/rfcomm0'},
-  device: {name: 'headset', driver: 'neurosky'},
+  connections: {
+    neurosky: { adaptor: 'neurosky', port: '/dev/rfcomm0' }
+  },
+
+  devices: {
+    headset: { driver: 'neurosky' }
+  },
+
   work: function(my) {
     my.headset.on('attention', function(data) {
       console.log("attention:" + data);
@@ -12,6 +18,4 @@ Cylon.robot({
       console.log("meditation:" + data);
     });
   }
-});
-
-Cylon.start();
+}).start();
