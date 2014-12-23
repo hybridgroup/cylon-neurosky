@@ -15,15 +15,13 @@ https://github.com/hybridgroup/cylon
 
 [![Build Status](https://secure.travis-ci.org/hybridgroup/cylon-neurosky.png?branch=master)](http://travis-ci.org/hybridgroup/cylon-neurosky) [![Code Climate](https://codeclimate.com/github/hybridgroup/cylon-neurosky/badges/gpa.svg)](https://codeclimate.com/github/hybridgroup/cylon-neurosky) [![Test Coverage](https://codeclimate.com/github/hybridgroup/cylon-neurosky/badges/coverage.svg)](https://codeclimate.com/github/hybridgroup/cylon-neurosky)
 
-## Getting Started
+## How to Install
 
-Install the module with: `npm install cylon-neurosky`
+    $ npm install cylon-neurosky
 
-## Examples
+## How to Use
 
 This example displays the Attention and Meditation data reading sent by the Mindwave Headset:
-
-### JavaScript
 
 ```javascript
 var Cylon = require('cylon');
@@ -49,7 +47,7 @@ Cylon.robot({
 }).start();
 ```
 
-## How To Connect
+## How to Connect
 
 ### OSX
 
@@ -75,6 +73,12 @@ Connect to the Mindwave using this command (substituting the actual address of y
 ### Windows
 
 You should be able to pair your Mindwave using your normal system tray applet for Bluetooth, and then connect to the COM port that is bound to the device, such as `COM3`.
+
+## Documentation
+
+We're busy adding documentation to [cylonjs.com](http://cylonjs.com). Please check there as we continue to work on Cylon.js.
+
+Thank you!
 
 ## Contributing
 
