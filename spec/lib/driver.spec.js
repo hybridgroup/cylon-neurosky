@@ -1,9 +1,9 @@
+/* jshint expr:true */
 "use strict";
 
 var Driver = source("driver");
 
-var Cylon = require('cylon'),
-    Buffy = require('buffy');
+var Cylon = require("cylon");
 
 describe("Cylon.Drivers.Neurosky", function() {
   var driver;
@@ -12,7 +12,7 @@ describe("Cylon.Drivers.Neurosky", function() {
     driver = new Driver({ connection: {} });
   });
 
-  it('subclasses Cylon.Driver', function() {
+  it("subclasses Cylon.Driver", function() {
     expect(driver).to.be.an.instanceOf(Cylon.Driver);
     expect(driver).to.be.an.instanceOf(Driver);
   });
@@ -40,12 +40,12 @@ describe("Cylon.Drivers.Neurosky", function() {
       });
 
       it("emits the provided data", function() {
-        expect(driver.emit).to.be.calledWith('data', 'data');
+        expect(driver.emit).to.be.calledWith("data", "data");
       });
 
       it("calls #parse with the data", function() {
-        expect(driver.parse).to.be.calledWith('data');
-      })
+        expect(driver.parse).to.be.calledWith("data");
+      });
     });
   });
 

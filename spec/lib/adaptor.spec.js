@@ -1,7 +1,8 @@
+/* jshint expr:true */
 "use strict";
 
-var serialport = require('serialport'),
-    Cylon = require('cylon');
+var serialport = require("serialport"),
+    Cylon = require("cylon");
 
 var Adaptor = source("adaptor");
 
@@ -10,7 +11,7 @@ describe("Cylon.Adaptors.Neurosky", function() {
 
   beforeEach(function() {
     adaptor = new Adaptor({
-      port: '/dev/null'
+      port: "/dev/null"
     });
   });
 
@@ -20,7 +21,7 @@ describe("Cylon.Adaptors.Neurosky", function() {
   });
 
   describe("#constructor", function() {
-    it('sets @serialPort to a SerialPort instance', function() {
+    it("sets @serialPort to a SerialPort instance", function() {
       expect(adaptor.serialPort).to.be.a.instanceOf(serialport.SerialPort);
       expect(adaptor.serialPort.path).to.be.eql("/dev/null");
     });
@@ -36,10 +37,10 @@ describe("Cylon.Adaptors.Neurosky", function() {
       open = adaptor.serialPort.open;
     });
 
-    it('tells the serialport to open', function() {
+    it("tells the serialport to open", function() {
       adaptor.connect(callback);
       expect(open).to.be.called;
-    })
+    });
 
     context("when the serialport is open", function() {
       beforeEach(function() {
@@ -53,7 +54,7 @@ describe("Cylon.Adaptors.Neurosky", function() {
       });
 
       it("emits the 'connect' event", function() {
-        expect(adaptor.emit).to.be.calledWith('connect');
+        expect(adaptor.emit).to.be.calledWith("connect");
       });
     });
   });
@@ -101,7 +102,7 @@ describe("Cylon.Adaptors.Neurosky", function() {
       });
 
       it("emits the 'disconnect' event", function() {
-        expect(emit).to.be.calledWith('disconnect');
+        expect(emit).to.be.calledWith("disconnect");
       });
 
       it("triggers the callback", function() {
@@ -113,10 +114,10 @@ describe("Cylon.Adaptors.Neurosky", function() {
   describe("#commands", function() {
     it("is an array of Neurosky commands", function() {
       var commands = adaptor.commands;
-      expect(commands).to.be.an('array');
+      expect(commands).to.be.an("array");
 
       commands.forEach(function(command) {
-        expect(command).to.be.a('string');
+        expect(command).to.be.a("string");
       });
     });
   });
@@ -132,17 +133,17 @@ describe("Cylon.Adaptors.Neurosky", function() {
 
     it("listens for the 'data' event on the serialport", function() {
       adaptor.read(callback);
-      expect(on).to.be.calledWith('data');
+      expect(on).to.be.calledWith("data");
     });
 
     context("when data is read from the serialport", function() {
       beforeEach(function() {
-        on.yields('data!');
+        on.yields("data!");
       });
 
       it("triggers the callback with the data", function() {
         adaptor.read(callback);
-        expect(callback).to.be.calledWith('data!');
+        expect(callback).to.be.calledWith("data!");
       });
     });
   });
