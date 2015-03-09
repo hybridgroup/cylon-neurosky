@@ -17,7 +17,7 @@ https://github.com/hybridgroup/cylon
 
 ## How to Install
 
-    $ npm install cylon-neurosky
+    $ npm install cylon cylon-neurosky
 
 ## How to Use
 
