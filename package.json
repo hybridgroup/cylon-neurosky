@@ -31,10 +31,6 @@
     "jshint": "~2.4.4"
   },
 
-  "peerDependencies": {
-    "cylon": ">= 0.22.0 < 1"
-  },
-
   "dependencies": {
     "cylon": "~0.22.0",
     "serialport": "~1.4.6",
