@@ -33,8 +33,8 @@
 
   "dependencies": {
     "cylon": "~0.22.0",
-    "serialport": "~1.4.6",
-    "browser-serialport": "~1.0.6",
+    "serialport": "~1.6.3",
+    "browser-serialport": "~2.0.1",
     "buffy": "~0.0.5"
   }
 }
