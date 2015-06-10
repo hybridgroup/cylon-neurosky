@@ -17,10 +17,21 @@
     "url": "https://github.com/hybridgroup/cylon-neurosky"
   },
 
-  "licenses": [
-    {
-      "type": "Apache 2.0"
-    }
+  "license": "Apache-2.0",
+
+  "keywords": [
+    "cylon",
+    "cylonjs",
+    "cylons",
+    "robot",
+    "robots",
+    "robotics",
+    "iot",
+    "hardware",
+    "neurosky",
+    "mindwave",
+    "eeg",
+    "brainwave"
   ],
 
   "devDependencies": {
