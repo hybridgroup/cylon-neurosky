@@ -4,11 +4,11 @@ var Cylon = require("cylon");
 
 Cylon.robot({
   connections: {
-    neurosky: { adaptor: "neurosky", port: "/dev/rfcomm0"  }
+    neurosky: { adaptor: "neurosky", port: "/dev/rfcomm0" }
   },
 
   devices: {
-    headset: { driver: "neurosky"  }
+    headset: { driver: "neurosky" }
   },
 
   work: function(my) {

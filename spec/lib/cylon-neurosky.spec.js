@@ -1,10 +1,9 @@
-/* jshint expr:true */
 "use strict";
 
-var neurosky = source("cylon-neurosky");
+var neurosky = lib("cylon-neurosky");
 
-var Adaptor = source("adaptor"),
-    Driver = source("driver");
+var Adaptor = lib("adaptor"),
+    Driver = lib("driver");
 
 describe("cylon-neurosky", function() {
   describe("#adaptors", function() {

@@ -1,10 +1,9 @@
-/* jshint expr:true */
 "use strict";
 
 var serialport = require("serialport"),
     Cylon = require("cylon");
 
-var Adaptor = source("adaptor");
+var Adaptor = lib("adaptor");
 
 describe("Cylon.Adaptors.Neurosky", function() {
   var adaptor;
