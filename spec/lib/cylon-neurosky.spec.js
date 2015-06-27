@@ -1,6 +1,6 @@
 "use strict";
 
-var neurosky = lib("cylon-neurosky");
+var neurosky = lib("../");
 
 var Adaptor = lib("adaptor"),
     Driver = lib("driver");

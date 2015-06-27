@@ -1,7 +1,6 @@
 {
   "name": "cylon-neurosky",
   "version": "0.10.0",
-  "main": "lib/cylon-neurosky.js",
   "description": "Cylon module for Neurosky",
   "homepage": "http://cylonjs.com",
   "bugs": "https://github.com/hybridgroup/cylon-neurosky/issues",
