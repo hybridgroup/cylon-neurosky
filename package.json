@@ -34,16 +34,16 @@
   ],
 
   "devDependencies": {
-    "sinon-chai": "~2.5.0",
-    "chai": "~1.9.0",
-    "mocha": "~1.17.1",
-    "sinon": "~1.8.2",
-    "eslint": "0.22.1"
+    "sinon-chai": "2.8.0",
+    "chai": "3.0.0",
+    "mocha": "2.2.5",
+    "sinon": "1.15.4",
+    "eslint": "0.24.0"
   },
 
   "dependencies": {
     "cylon": "~1.0.0",
-    "serialport": "~1.6.3",
+    "serialport": "1.7.4",
     "browser-serialport": "~2.0.1",
     "buffy": "~0.0.5"
   }
