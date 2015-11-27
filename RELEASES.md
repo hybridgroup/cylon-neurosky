@@ -1,5 +1,7 @@
 ## Release History
 
+Version 0.14.0 - Use node-serialport 2.0.x
+
 Version 0.13.0 - Use Cylon 1.2.0
 
 Version 0.12.0 - Use Cylon 1.1.0

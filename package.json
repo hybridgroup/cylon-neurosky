@@ -1,13 +1,13 @@
 {
   "name": "cylon-neurosky",
-  "version": "0.13.0",
+  "version": "0.14.0",
   "description": "Cylon module for Neurosky",
   "homepage": "http://cylonjs.com",
   "bugs": "https://github.com/hybridgroup/cylon-neurosky/issues",
 
   "author": {
     "name": "The Hybrid Group",
-    "email": "",
+    "email": "cylonjs@hybridgroup.com",
     "url": "http://hybridgroup.com"
   },
 
@@ -44,7 +44,7 @@
 
   "dependencies": {
     "cylon": "~1.2.0",
-    "serialport": "1.7.4",
+    "serialport": "^2.0.0",
     "browser-serialport": "~2.0.1",
     "buffy": "~0.0.5"
   }
